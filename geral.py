@@ -1,8 +1,11 @@
 
 import numpy as np # type: ignore
+import pandas as pd # type: ignore
 
-matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-print(matrix)
+df = pd.DataFrame({'Name': ['Ann', 'Bob'], 'Age': [20, 50]})
+print(df)
 
-transpose = matrix.T 
-print(transpose)
+ds = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
+# print(ds)
+
+print(df[['Name', 'Age']])
